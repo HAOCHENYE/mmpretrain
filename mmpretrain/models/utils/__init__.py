@@ -3,6 +3,7 @@ from .attention import (BEiTAttention, ChannelMultiheadAttention,
                         CrossMultiheadAttention, LeAttention,
                         MultiheadAttention, PromptMultiheadAttention,
                         ShiftWindowMSA, WindowMSA, WindowMSAV2)
+from .auto_wrap_policy import transformer_encoder_wrap_policy
 from .batch_augments import CutMix, Mixup, RandomBatchAugment, ResizeMix
 from .batch_shuffle import batch_shuffle_ddp, batch_unshuffle_ddp
 from .channel_shuffle import channel_shuffle

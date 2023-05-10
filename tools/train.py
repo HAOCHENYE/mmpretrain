@@ -6,6 +6,7 @@ from copy import deepcopy
 
 from mmengine.config import Config, ConfigDict, DictAction
 from mmengine.runner import Runner
+from mmengine.runner._flexible_runner import FlexibleRunner
 from mmengine.utils import digit_version
 from mmengine.utils.dl_utils import TORCH_VERSION
 
@@ -149,7 +150,7 @@ def main():
     cfg = merge_args(cfg, args)
 
     # build the runner from config
-    runner = Runner.from_cfg(cfg)
+    runner = FlexibleRunner.from_cfg(cfg)
 
     # start training
     runner.train()
